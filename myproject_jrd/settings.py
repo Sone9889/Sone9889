@@ -31,7 +31,6 @@ DEBUG = os.getenv('DEBUG') == 'True'
 
 production_host = os.getenv('PRODUCTION_HOST ') 
 ALLOWED_HOSTS = [production_host] if production_host is not None else[]
-ALLOWED_HOSTS = ['your-project-name.onrender.com']
 
 
 # Application definition
@@ -131,7 +130,6 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/5.1/howto/static-files/
 
 STATIC_URL = 'static/'
-STATIC_ROOT = os.path.join(BASE_DIR, 'static')
 # Default primary key field type
 # https://docs.djangoproject.com/en/5.1/ref/settings/#default-auto-field
 
