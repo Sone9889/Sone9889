@@ -1,0 +1,58 @@
+{% extends 'app_general/components/base.html' %}
+
+{% load static %}
+
+
+{% block site_titel %}{{ food.title }} | {% endblock %}
+
+{% block content %}
+
+
+<section class="content-section content-section-single">
+    <div class="content-container">
+        {% if food is not None%}
+        <div class="grid grid-2">
+            <img class="image-block" src="{% static food.image_relative_url  %}">
+            <div>
+                <h3>{{ food.titel }}</h3>
+                {% if food.special_price is not None %}
+                <p>
+                    <span>{{ food.special_price|floatformat:'g' }} B</span>
+                    <del class="text-gray" >{{ food.price|floatformat:'g' }} B</del>
+                </p>
+                {% else %}
+                <p>{{ food.price|floatformat:'g' }} B</p>
+                {% endif %}
+
+
+                {% if food.is_premium %}
+
+                <p>*** Menu Premium</p>
+
+                {% endif %}
+                <p>Promotion for {{ food.promotion_end_at|date:'j N Y' }}</p>
+
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Vero repellat magni recusandae
+                    necessitatibus
+                    error
+                    deleniti, ratione expedita voluptatum iusto dicta repudiandae adipisci qui quae! Illo adipisci
+                    distinctio
+                    nesciunt
+                    repellendus. Labore, modi libero praesentium eaque pariatur doloribus minima ut aperiam magni
+                    voluptas
+                    odio
+                    animi
+                </p>
+                <p>
+                    <a class="button button-primaty" style="margin: 16px;" href="{% url 'subscription' %}">Register Promotion</a>
+                </p>
+            </div>
+
+        </div>
+
+        {% else %}
+        <p>Ha mai jer menu nee....</p>
+        {% endif %}
+    </div>
+</section>
+{% endblock %}

@@ -1,0 +1,56 @@
+{% extends 'app_general/components/base.html' %}
+{% load static %}
+
+{% block content %}
+<section class="home-landing-section">
+    <h1 class="home-landing-text">Janraider</h1>
+    <h6 class="home-landing-text">Lorem ipsum dolor sit amet consectetur adipisicing elit.</h6>
+    <p>
+        <a class="button" href="{% url 'foods' %}">List Menu </a>
+        <a class="button button-primaty" href="{% url 'subscription' %}">Register Promotion</a>
+    </p>
+</section>
+<section class="content-section">
+    <div class="content-container">
+        <h4 class="content-title text-center">Lorem ipsum dolor sit.</h4>
+        <div class="grid grid-2 grid-3">
+            <div>
+
+                <img class="image-block" src="{% static 'app_general/background02.jpg' %}">
+
+                <p>
+                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Cum rem qui quo fuga reprehenderit vitae
+                    distinctio illum dolores labore fugit.
+                </p>
+            </div>
+
+            <div>
+
+                <img class="image-block" src="{% static 'app_general/background03.jpg' %}">
+
+                <p>
+                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Cum rem qui quo fuga reprehenderit vitae
+                    distinctio illum dolores labore fugit.
+                </p>
+            </div>
+
+            <div>
+
+                <img class="image-block" src="{% static 'app_general/background02.jpg' %}">
+
+                <p>
+                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Cum rem qui quo fuga reprehenderit vitae
+                    distinctio illum dolores labore fugit.
+                </p>
+            </div>
+        </div>
+
+        <p class="text-center">
+            <a class="button button-primaty" href="{% url 'about' %}">About Menu</a>
+        </p>
+    </div>
+
+</section>
+
+
+{% endblock %}

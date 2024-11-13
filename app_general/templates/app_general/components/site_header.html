@@ -1,0 +1,11 @@
+{% load static %}
+<header class="site-header">
+    
+    <a class="site-header-item site-header-brand" href="{%  url 'home' %}">
+        <img src="{% static 'app_general/bibimbap.png' %}" style="height: 40px;margin-right: 8px; display: inline-block;">
+        <span>Home</span>
+    </a>
+    
+    <a class="site-header-item" href="{%  url 'foods' %}">Menu</a>
+    <a class="site-header-item" href="{%  url 'about' %}">About</a>
+</header>
